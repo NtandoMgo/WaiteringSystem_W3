@@ -172,6 +172,7 @@
     <Compile Include="Business\Role.cs" />
     <Compile Include="Business\Runner.cs" />
     <Compile Include="Business\Waiter.cs" />
+    <Compile Include="Data\DB.cs" />
     <Compile Include="EmployeeDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,7 +223,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Presentation\" />
   </ItemGroup>
   <ItemGroup>
