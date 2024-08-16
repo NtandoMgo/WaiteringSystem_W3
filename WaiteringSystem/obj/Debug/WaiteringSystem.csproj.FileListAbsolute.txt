@@ -1,0 +1,4 @@
+C:\Users\Admin\OneDrive - University of Cape Town\Desktop\2021\INF2011\Vula Workshops\Workshop 2\WaiteringSystem\WaiteringSystem\obj\Debug\WaiteringSystem.csprojResolveAssemblyReference.cache
+C:\Users\Admin\OneDrive - University of Cape Town\Desktop\2021\INF2011\Vula Workshops\Workshop 2\WaiteringSystem\WaiteringSystem\obj\Debug\WaiteringSystem.Properties.Resources.resources
+C:\Users\Admin\OneDrive - University of Cape Town\Desktop\2021\INF2011\Vula Workshops\Workshop 2\WaiteringSystem\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.GenerateResource.Cache
+C:\Users\Admin\OneDrive - University of Cape Town\Desktop\2021\INF2011\Vula Workshops\Workshop 2\WaiteringSystem\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.CoreCompileInputs.cache
