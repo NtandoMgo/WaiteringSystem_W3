@@ -11,11 +11,14 @@ namespace WaiteringSystem.Data
 {
     internal class DB
     {
+        #region Data fields
         private string strConn = Settings.Default.EmpDbConStr;
         private SqlConnection cnMain;
         private DataSet dsMain;
         private SqlDataAdapter daMain;
+        #endregion
 
+        #region Constructor
         public DB()
         {
             try
@@ -25,11 +28,33 @@ namespace WaiteringSystem.Data
 
                 dsMain = new DataSet(); // initializing/create new dataset obj
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                Console.WriteLine("an error occured in DB: "+ex);
+                Console.WriteLine("an error occured in DB: " + ex);
+            }
+            finally { 
+                cnMain.Close(); // since the FillDataSet opens the con and close it itself
             }
         }
+        #endregion
 
+        #region Methods
+        public void FillDataSet(string aSQLstring, string aTable)
+        {
+            try
+            {
+                daMain = new SqlDataAdapter(aSQLstring, cnMain);
+
+                cnMain.Open();
+
+                dsMain.Clear();
+                daMain.Fill(dsMain, aTable);
+            }
+            catch (Exception errObj)
+            {
+                Console.WriteLine(errObj.Message + " " + errObj.StackTrace);
+            }
+        }
+        #endregion
     }
 }
