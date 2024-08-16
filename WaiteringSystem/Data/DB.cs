@@ -55,6 +55,29 @@ namespace WaiteringSystem.Data
                 Console.WriteLine(errObj.Message + " " + errObj.StackTrace);
             }
         }
+
+        public bool UpdateDataSource(string sqlLocal, string table)
+        {
+            bool successful = false;
+
+            try
+            {
+                cnMain.Open();
+                daMain.Update(dsMain, table);
+                cnMain.Close();
+
+                daMain.Fill(dsMain, table); // ?? Fill with SQl statement ??
+
+                successful = true;
+            }catch (Exception errObj)
+            {
+                Console.WriteLine(errObj.Message + " " + errObj.StackTrace);
+                successful=false;
+            }
+
+            return successful;
+
+        }
         #endregion
     }
 }
